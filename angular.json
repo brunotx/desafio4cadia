@@ -119,6 +119,10 @@
           }
         }
       }
-    }},
-  "defaultProject": "desafio4cadia"
+    }
+  },
+  "defaultProject": "desafio4cadia",
+  "cli": {
+    "analytics": false
+  }
 }
