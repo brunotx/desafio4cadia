@@ -46,3 +46,9 @@ nav {
     color: #fff;
     background: #0083a3;            
 }
+
+.btn {
+    background-color: #00CCFF;
+    border-color: #00CCFF;
+    width: 150px;
+}

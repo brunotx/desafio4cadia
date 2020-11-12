@@ -1,0 +1,55 @@
+.container {
+    margin: 0;
+}
+
+.row {
+    width: 100vw;
+    height: 100vh;
+}
+
+.col-6 {
+    width: 50%;
+    height: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+.pig {
+    width: 100%;
+    height: 100%;
+}
+
+.loginContainer {
+    background-color: black;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    flex-direction: column;
+}
+
+.logo {
+    align-self: center;
+}
+
+.form {
+    margin-top: 30px;
+    width: 400px;
+    align-self: center;
+    color: white;
+}
+
+.btn {
+    width: 400px;
+    background-color: #00CCFF;
+}
+
+p {
+    margin-top: 5px;
+    
+}
+
+a {
+    color: #00CCFF;
+    cursor: pointer;
+}
