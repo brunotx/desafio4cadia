@@ -1,8 +1,30 @@
 .container {
-    width: 95vw;
-    height: 96vh;
-    margin: 15px;
-    background-color: #faebd7;
-    border-radius: 30px;
-    opacity: 0.2;
+    background-image: url('../../../assets/img/pexels-lukas-684387.jpg');
+    background-size: cover;
+    width: 100vw;
+    height: 100vh;
+    opacity: 1;
+    max-width: 2560px;
+}
+
+.row {
+    margin: 50px;
+}
+
+h2 {
+    font-size: 4em;
+    line-height: 1em;
+    color: #fff;
+    max-width: 640px;
+    font-weight: 600;
+    font-family: 'Nunito', sans-serif;
+    margin-bottom: 0px;
+}
+
+p {
+    font-size: 1em;
+    color: #ddd;
+    max-width: 460px;
+    font-family: 'Nunito', sans-serif;
+    vertical-align: center;
 }
