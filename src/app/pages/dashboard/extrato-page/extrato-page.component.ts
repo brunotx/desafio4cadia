@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { ActivatedRoute } from '@angular/router';
+import { AccountService } from '../../services/account.service';
 
 @Component({
   selector: 'app-extrato-page',
@@ -7,9 +9,21 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ExtratoPageComponent implements OnInit {
 
-  constructor() { }
+  public userId;
+  public bankStatements = [];
+
+  constructor( private accountService: AccountService,  private router: ActivatedRoute) { }
 
   ngOnInit(): void {
+
+    const id = this.router.snapshot.params.id;
+    if (id !== null && id !== undefined) {
+      this.userId = id;
+    }
+
+    this.accountService.getBankStatements(this.userId).then(
+      (bankStatements) => { this.bankStatements = bankStatements; console.log(bankStatements); }
+    );
   }
 
 }

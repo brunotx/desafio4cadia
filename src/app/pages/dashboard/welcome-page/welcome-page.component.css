@@ -38,19 +38,22 @@ img {
 
 .cards {
     display: flex;
-    flex-wrap: wrap;
-    padding-left: 30%;
-    padding-right: 30%;
-    padding-top: 25px;
+    flex-direction: row;
+    flex-direction: row;
+    padding-left: 10%;
+    padding-right: 10%;
+    padding-top: 10%;
+    width: fit-content;
+    margin: auto;
 }
 
 .card {
     cursor: pointer;
-    width: 50%;
+    width: 40%;
 }
 
 .card:hover {
-    background-color: teal;
+    background-color: #00CCFF;
 }
 
 .card-body {

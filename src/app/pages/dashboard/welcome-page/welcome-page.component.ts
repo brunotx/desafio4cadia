@@ -1,6 +1,6 @@
 import { Route } from '@angular/compiler/src/core';
 import { Component, OnInit } from '@angular/core';
-import { Router } from '@angular/router';
+import { ActivatedRoute, Router } from '@angular/router';
 
 @Component({
   selector: 'app-welcome-page',
@@ -9,13 +9,19 @@ import { Router } from '@angular/router';
 })
 export class WelcomePageComponent implements OnInit {
 
-  constructor(private route: Router) { }
+  public userId: string;
+
+  constructor(private route: Router, private router: ActivatedRoute) { }
 
   ngOnInit(): void {
+    const id = this.router.snapshot.params.id;
+    if (id !== null && id !== undefined) {
+      this.userId = id;
+    }
   }
 
   goTo(event) {
-    this.route.navigateByUrl('dashboard/' + event);
+    this.route.navigateByUrl('dashboard/account/' + event + '/' + this.userId);
   }
 
 }

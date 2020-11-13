@@ -4,11 +4,11 @@
             <img src="../../../assets/img/LogoSemFundo.png" alt="">
         </div>
         <ul class="menu">
-            <li><a [routerLink]="['/dashboard/']">Home</a></li>
-            <li><a [routerLink]="['/dashboard/extrato']">Extrato</a></li>
-            <li><a [routerLink]="['/dashboard/saldo']">Saldo</a></li>
-            <li><a [routerLink]="['/dashboard/user/1']">Dados do Usuario</a></li>
-            <li><a [routerLink]="['/dashboard/indicacao']">Indicação de Amigos</a></li>
+            <li><a [routerLink]="['/dashboard/account/home', userId]">Home</a></li>
+            <li><a [routerLink]="['/dashboard/account/extrato/', userId]">Extrato</a></li>
+            <li><a [routerLink]="['/dashboard/account/saldo/', userId]">Saldo</a></li>
+            <li><a [routerLink]="['/dashboard/account/user/', userId]">Dados do Usuario</a></li>
+            <!-- <li><a [routerLink]="['/dashboard/account/indicacao/', userId]">Indicação de Amigos</a></li> -->
         </ul>
     </ng-sidebar>
     <div ng-sidebar-content>

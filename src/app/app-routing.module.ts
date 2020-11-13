@@ -8,7 +8,7 @@ const routes: Routes = [
   { path: '', component: LandingPageComponent },
   { path: 'login', component: LoginComponent },
   { path: 'signIn', component: SignInComponent },
-  { path: 'dashboard/:id', loadChildren: 'src/app/pages/dashboard/dashboard.module#DashboardModule' }
+  { path: 'dashboard', loadChildren: 'src/app/pages/dashboard/dashboard.module#DashboardModule' }
 ];
 
 @NgModule({

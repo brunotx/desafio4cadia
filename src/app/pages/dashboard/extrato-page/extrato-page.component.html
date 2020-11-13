@@ -5,7 +5,7 @@
             <h3>Extrato</h3>
         </div>
     </div>
-    <div class="body">
+    <div class="body" *ngIf="bankStatements !== undefined">
       <p>Rio de Janeiro, 12 de Novembro de 2020</p>
         <table class="table table-striped table-dark">
             <thead>
@@ -16,55 +16,10 @@
               </tr>
             </thead>
             <tbody>
-              <tr>
-                <td>10/11/2020</td>
-                <td>Postis Shell Barra da Tijucis</td>
-                <td>- R$ 40,00</td>
-              </tr>
-              <tr>
-                <td>11/11/2020</td>
-                <td>McDonaldis Lanchis</td>
-                <td>- R$ 29,00</td>
-              </tr>
-              <tr>
-                <td>12/11/2020</td>
-                <td>Celular Iphonis</td>
-                <td>- R$ 4.000,00</td>
-              </tr>
-              <tr>
-                <td>12/11/2020</td>
-                <td>Celular Iphonis</td>
-                <td>- R$ 4.000,00</td>
-              </tr>
-              <tr>
-                <td>12/11/2020</td>
-                <td>Celular Iphonis</td>
-                <td>- R$ 4.000,00</td>
-              </tr>
-              <tr>
-                <td>12/11/2020</td>
-                <td>Celular Iphonis</td>
-                <td>- R$ 4.000,00</td>
-              </tr>
-              <tr>
-                <td>12/11/2020</td>
-                <td>Celular Iphonis</td>
-                <td>- R$ 4.000,00</td>
-              </tr>
-              <tr>
-                <td>12/11/2020</td>
-                <td>Celular Iphonis</td>
-                <td>- R$ 4.000,00</td>
-              </tr>
-              <tr>
-                <td>12/11/2020</td>
-                <td>Celular Iphonis</td>
-                <td>- R$ 4.000,00</td>
-              </tr>
-              <tr>
-                <td>12/11/2020</td>
-                <td>Celular Iphonis</td>
-                <td>- R$ 4.000,00</td>
+              <tr *ngFor="let statements of bankStatements">
+                <td>{{statements.date | date}}</td>
+                <td>{{statements.description}}</td>
+                <td>- {{statements.value}}</td>
               </tr>
             </tbody>
           </table>
