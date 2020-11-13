@@ -19,7 +19,7 @@
               <tr *ngFor="let statements of bankStatements">
                 <td>{{statements.date | date}}</td>
                 <td>{{statements.description}}</td>
-                <td>- {{statements.value}}</td>
+                <td>- {{statements.value | currency:'BRL'}}</td>
               </tr>
             </tbody>
           </table>

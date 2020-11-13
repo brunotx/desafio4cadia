@@ -22,7 +22,7 @@ export class ExtratoPageComponent implements OnInit {
     }
 
     this.accountService.getBankStatements(this.userId).then(
-      (bankStatements) => { this.bankStatements = bankStatements; console.log(bankStatements); }
+      (bankStatements) => { this.bankStatements = bankStatements; }
     );
   }
 

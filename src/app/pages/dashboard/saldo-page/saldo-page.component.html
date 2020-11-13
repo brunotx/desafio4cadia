@@ -15,7 +15,7 @@
                     <div class="row">
                         <div class="col-10 pr-0">
                             <input [type]="!showPassword ? 'password' : 'text'" class="form-control"
-                                value="{{userAccounts[0].saldo | currency:'BRL':'symbol-narrow':'4.2-2'}}">
+                                value="{{userAccounts[0].saldo | currency:'BRL'}}">
                         </div>
                         <div class="col-2 pl-0">
                             <button class="btn btn-outline-secondary" type="button" (click)="seePassword()"><i
@@ -30,7 +30,7 @@
             <div class="row">
                 <div class="col-sm-4 col-xs-12">
                     <button type="button" class="btn btn-info" (click)="openModal(template)">Realizar
-                        Transferência</button>
+                        Pagamento</button>
                 </div>
             </div>
         </div>
@@ -47,44 +47,31 @@
         </button>
     </div>
     <div class="modal-body">
-        <h4 class="modal-title pull-left mb-5">Transferência</h4>
+        <h4 class="modal-title pull-left mb-5">Pagamentos</h4>
         <div class="form-group">
             <div class="row">
                 <div class="col-sm-4 col-xs-12">
-                    <label class="control-label">Bancis</label>
+                    <label class="control-label">Descrição</label>
                 </div>
                 <div class="col-sm-7 col-xs-7 jm-clear-p">
-                    <select class="custom-select" id="inputGroupSelect01">
-                        <option selected>Selecione...</option>
-                        <option value="1">MussumBank</option>
-                    </select>
+                    <input class="form-control" type="text" [(ngModel)]="description"/>
                 </div>
             </div>
         </div>
         <div class="form-group">
             <div class="row">
                 <div class="col-sm-4 col-xs-12">
-                    <label class="control-label">Agencis</label>
+                    <label class="control-label">Valor</label>
                 </div>
                 <div class="col-sm-7 col-xs-7 jm-clear-p">
-                    <input class="form-control" type="text" />
-                </div>
-            </div>
-        </div>
-        <div class="form-group">
-            <div class="row">
-                <div class="col-sm-4 col-xs-12">
-                    <label class="control-label">Contis</label>
-                </div>
-                <div class="col-sm-7 col-xs-7 jm-clear-p">
-                    <input class="form-control" type="text" />
+                    <input class="form-control" type="text" [(ngModel)]="value"/>
                 </div>
             </div>
         </div>
         <div class="form-group mt-5">
             <div class="row">
                 <div class="col-12 text-right">
-                    <button type="button" class="btn btn-info">Transferir</button>
+                    <button type="button" class="btn btn-info" (click)="submitPayment(value, description)">Pagar</button>
                 </div>
             </div>
         </div>

@@ -43,9 +43,9 @@ export class AccountService {
                     agencia: element.get('Agencia'),
                     conta: element.get('Conta'),
                     saldo: parseInt(element.get('Saldo')),
+                    id: element.id
                 };
                 contas.push(conta);
-                return contas;
             }
         }, (error) => {
             if (typeof document !== 'undefined') document.write(`Error while fetching Account: ${JSON.stringify(error)}`);
@@ -63,18 +63,47 @@ export class AccountService {
             for (let i = 0; i < results.length; i++) {
                 const element = results[i];
                 const bankStatement = {
-                    value: element.get('value'),
+                    value: parseInt(element.get('value')),
                     description: element.get('description'),
                     date: element.get('createdAt'),
                 };
-                console.log(bankStatement);
-                bankStatements.push(bankStatement);
-                return bankStatements;
+                bankStatements.unshift(bankStatement);
             }
         }, (error) => {
             if (typeof document !== 'undefined') { document.write(`Error while fetching BankStatement: ${JSON.stringify(error)}`); }
             console.error('Error while fetching BankStatement', error);
         });
         return bankStatements;
+    }
+
+    putBankStatements(value, description, userId) {
+        const BankStatement = Parse.Object.extend('BankStatement');
+        const myNewObject = new BankStatement();
+
+        myNewObject.set('value', parseInt(value));
+        myNewObject.set('description', description);
+        myNewObject.set('userId', userId);
+
+        myNewObject.save().then(
+            (result) => {
+                this.router.navigateByUrl('dashboard/account/extrato/' + userId);
+            },
+            (error) => {
+                if (typeof document !== 'undefined') document.write(`Error while creating BankStatement: ${JSON.stringify(error)}`);
+                console.error('Error while creating BankStatement: ', error);
+            }
+        );
+    }
+
+    getNewSaldo(newSaldo, accountId) {
+        const Account = Parse.Object.extend('Account');
+        const query = new Parse.Query(Account);
+        // here you put the objectId that you want to update
+        query.get(accountId).then((object) => {
+            object.set('Saldo', newSaldo);
+            object.save().then((response) => {
+            }, (error) => {
+            });
+        });
     }
 }

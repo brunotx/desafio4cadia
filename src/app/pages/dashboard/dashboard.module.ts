@@ -10,6 +10,7 @@ import { IndicacaoPageComponent } from './indicacao-page/indicacao-page.componen
 import { CommonModule } from '@angular/common';
 import { ModalModule, BsModalService } from 'ngx-bootstrap/modal';
 import { AuthGuard } from 'src/app/Auth/auth-guard.service';
+import { FormsModule } from '@angular/forms';
 
 
 const routes: Routes = [
@@ -36,6 +37,7 @@ const routes: Routes = [
     ],
     imports: [
         CommonModule,
+        FormsModule,
         ModalModule.forRoot(),
         SidebarModule.forRoot(),
         RouterModule.forChild(routes)

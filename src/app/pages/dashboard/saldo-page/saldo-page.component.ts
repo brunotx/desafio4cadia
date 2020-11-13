@@ -13,6 +13,8 @@ export class SaldoPageComponent implements OnInit {
   public showPassword = false;
   public userId: string;
   public userAccounts = [];
+  public description = '';
+  public value = '';
 
   modalRef: BsModalRef;
 
@@ -37,4 +39,12 @@ export class SaldoPageComponent implements OnInit {
     this.modalRef = this.modalService.show(template);
   }
 
+  submitPayment(value, description) {
+    const accountId = this.userAccounts[0].id;
+    const accountSaldo = this.userAccounts[0].saldo;
+    const newSaldo = accountSaldo - parseInt(value);
+    this.modalRef.hide();
+    this.accountService.putBankStatements(value, description, this.userId);
+    this.accountService.getNewSaldo(newSaldo.toString(), accountId);
+  }
 }
