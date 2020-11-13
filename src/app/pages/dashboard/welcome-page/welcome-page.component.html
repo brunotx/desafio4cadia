@@ -1,0 +1,46 @@
+<div class="image">
+    <img src="../../../../assets/img/mussumdivulgacao.jpg" alt="">
+    <div class="titleBox">
+        <div class="title">
+            <h3>Dashboardis</h3>
+        </div>
+    </div>
+    <div class="body">
+        <h4>Bom dia, Bruno Oliveira!</h4>
+        <p>Rio de Janeiro, 12 de Novembro de 2020</p>
+        <div class="cards">
+            <div class="card border-light">
+                <div class="card-body"  (click)="goTo('extrato')">
+                    <h5 class="card-title">Extrato</h5>
+                    <lottie-player src="https://assets2.lottiefiles.com/packages/lf20_xnl4BO.json"
+                        background="transparent" speed="1" style="width: 90px; height: 90px;" loop autoplay>
+                    </lottie-player>
+                </div>
+            </div>
+            <div class="card border-light" (click)="goTo('saldo')">
+                <div class="card-body">
+                    <h5 class="card-title">Saldo</h5>
+                    <lottie-player src="https://assets2.lottiefiles.com/packages/lf20_Zuvubt.json"
+                        background="transparent" speed="1" style="width: 90px; height: 90px;" loop autoplay>
+                    </lottie-player>
+                </div>
+            </div>
+            <div class="card border-light" (click)="goTo('user/:1')">
+                <div class="card-body">
+                    <h5 class="card-title">Perfil</h5>
+                    <lottie-player src="https://assets2.lottiefiles.com/packages/lf20_XWMURU.json"
+                        background="transparent" speed="1" style="width: 90px; height: 90px;" loop autoplay>
+                    </lottie-player>
+                </div>
+            </div>
+            <div class="card border-light" (click)="goTo('indicacao')">
+                <div class="card-body">
+                    <h5 class="card-title">Indicação</h5>
+                    <lottie-player src="https://assets2.lottiefiles.com/packages/lf20_AxP7D9.json"
+                        background="transparent" speed="1" style="width: 90px; height: 90px;" loop autoplay>
+                    </lottie-player>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

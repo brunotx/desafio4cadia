@@ -19,8 +19,11 @@
     "@angular/platform-browser": "~9.1.11",
     "@angular/platform-browser-dynamic": "~9.1.11",
     "@angular/router": "~9.1.11",
-    "bootstrap": "^4.5.3",
     "@fortawesome/fontawesome-free": "5.5.0",
+    "bootstrap": "^4.5.3",
+    "ng-sidebar": "^9.4.2",
+    "ngx-bootstrap": "^6.2.0",
+    "parse": "^2.18.0",
     "rxjs": "~6.5.4",
     "tslib": "^1.10.0",
     "zone.js": "~0.10.2"

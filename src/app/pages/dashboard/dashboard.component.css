@@ -1,0 +1,60 @@
+ng-sidebar-container {
+    height: 100vh;
+}
+
+::ng-deep .ng-sidebar {
+    background-color: #000;
+    width: 20%;
+    padding: 1em 1.5em;
+    box-shadow: 0 0 2.5em rgba(85,85,85,0.5);
+    color: white;
+    z-index:2;
+}
+
+.menu {
+    margin-top: 3em;
+    display: block;
+}
+
+.menu li {
+    margin-bottom: 15px;
+    list-style-type: none;
+    text-transform: uppercase;
+}
+
+.menu li a {
+    display: block;
+    width: 100%;
+    cursor: pointer;
+    color: white;
+}
+
+.menu li a:hover {
+    text-decoration: underline;
+}
+
+.btn {
+    width: 60px;
+    height: 60px;
+    background: linear-gradient(to right, white 50%, black 0);
+    border-radius: 30px;
+    margin-left: -30px;
+    margin-top: 30px;
+    position: absolute;
+}
+
+.fas {
+    margin-top: 5px;
+    font-size: 30px;
+    cursor: pointer;
+    color: white;
+    z-index:1;
+}
+
+.container {
+    width: 90%;
+    height: 90vh;
+    margin-top: 40px;
+    padding: 0;
+    box-shadow: 0 0 2.5em rgba(85,85,85,0.5);
+}
