@@ -53,3 +53,20 @@ a {
     color: #00CCFF;
     cursor: pointer;
 }
+
+
+@media(max-width: 768px) {
+    .row {
+        display: flex;
+        flex-direction: column-reverse;
+    }
+
+    .pig {
+        width: 100vw;
+    }
+
+    .loginContainer {
+        width: 100vw;
+    }
+
+}
