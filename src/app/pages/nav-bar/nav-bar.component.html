@@ -1,13 +1,15 @@
-<header>
-    <img class="logo" src="../../../assets/img/LogoSemFundo.png" alt="">
-    <nav>
-        <ul class="nav-area">
-            <li><a href="#">Si num tem</a></li>
-            <li><a href="#">leite então</a></li>
-            <li><a href="#">bota uma</a></li>
-            <li><a href="#">pinga aí</a></li>
-            <li><a href="#">cumpadi</a></li>
-        </ul>
-    </nav>
-    <button type="button" class="btn btn-info" [routerLink]="['/login']" >Login</button>
+<header class="headerNavBar">
+    <div class="container">
+        <div class="logo">
+            <img class="logoImg" src="../../../assets/img/LogoSemFundo.png" alt="">
+        </div>
+        <nav class="navBar">
+            <a href="#">Si num tem</a>
+            <a href="#">leite então</a>
+            <a href="#">bota uma</a>
+            <a href="#">pinga aí</a>
+            <a href="#">cumpadi</a>
+        </nav>
+        <button type="button" class="btn btn-info" [routerLink]="['/login']" >Login</button>
+    </div>
 </header>
